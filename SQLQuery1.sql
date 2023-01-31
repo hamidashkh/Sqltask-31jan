@@ -107,6 +107,11 @@ Select Brands.Name,COUNT(Notebooks.Id) from Notebooks
 Right Join Brands
 on Brands.Id=Notebooks.BrandId
 
+--10) Hem Phone Hem de Notebookda Ortaq Olan Name ve BrandId Datalarni Bir Cedvelde Cixardan Query.
+Select n.Name,n.BrandId,p.Name,p.BrandId from Notebooks n
+Join Phones p
+on p.Id=n.Id
+
 --11) Phone ve Notebook da Id, Name, Price, ve BrandId Olan Butun Datalari Cixardan Query.
 Select * from Notebooks
 Union all 
